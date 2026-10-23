@@ -1,0 +1,136 @@
+{
+  "ready": true,
+  "archive_sha256": "cc91f3764434c533a430006b6d9c311aac1f426ae298ed42fea08c03dbdea433",
+  "window": {
+    "start": "2026-07-01",
+    "end": "2026-10-15"
+  },
+  "source_entries": 19,
+  "canonical_opportunities": 13,
+  "row_count_benchmarks": {
+    "interactions": 12000,
+    "qa_audits": 2200,
+    "employees": 240,
+    "training_enrollments": 1000
+  },
+  "reconciliation": {
+    "contacts": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    },
+    "average_aht_minutes": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 0.005000000000000782,
+      "tolerance": 0.0051
+    },
+    "fcr_rate": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 4.999999999999449e-05,
+      "tolerance": 5.1e-05
+    },
+    "avg_csat": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 0.004999999999999893,
+      "tolerance": 0.0051
+    },
+    "sla_attainment_rate": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 4.999999999999449e-05,
+      "tolerance": 5.1e-05
+    },
+    "cost_to_serve_usd": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 2.842170943040401e-14,
+      "tolerance": 0.0051
+    },
+    "peak_contacts": {
+      "mismatched_groups": 0,
+      "max_absolute_difference": 0.0,
+      "tolerance": 0
+    }
+  },
+  "contextual_relationship_checks": [
+    {
+      "child": "interactions",
+      "parent": "employees",
+      "inconsistent_fields": 0
+    },
+    {
+      "child": "qa_audits",
+      "parent": "interactions",
+      "inconsistent_fields": 0
+    },
+    {
+      "child": "coaching_actions",
+      "parent": "qa_audits",
+      "inconsistent_fields": 0
+    },
+    {
+      "child": "tickets",
+      "parent": "interactions",
+      "inconsistent_fields": 0
+    }
+  ],
+  "intentional_repeated_mappings": {
+    "OPP-001": 3,
+    "OPP-002": 3,
+    "OPP-003": 3
+  },
+  "warnings": [
+    "Workbook surrounding-whitespace difference: QA_CI-S2-R2; exact original cells preserved",
+    "Workbook surrounding-whitespace difference: QA_CI-S2-R3; exact original cells preserved",
+    "Workbook surrounding-whitespace difference: QA_CI-S2-R4; exact original cells preserved"
+  ],
+  "table_counts": {
+    "programs": 4,
+    "employees": 240,
+    "interactions": 12000,
+    "tickets": 12000,
+    "qa_audits": 2200,
+    "coaching_actions": 1094,
+    "training_enrollments": 1000,
+    "courses": 5,
+    "trainers": 26,
+    "sales_leads": 2415,
+    "hr_cases": 85,
+    "hr_onboarding": 240,
+    "employee_recognitions": 400,
+    "knowledge_articles": 16,
+    "daily_program_kpis": 428,
+    "source_opportunities": 19,
+    "opportunity_catalog": 13,
+    "solution_alternatives": 39,
+    "scenario_estimates": 39,
+    "relational_map": 12,
+    "data_dictionary_index": 20
+  },
+  "workbook_count": 4,
+  "relationship_checks": 27,
+  "relationship_violations": 0,
+  "exact_source_matches": 16,
+  "normalized_source_matches": 19,
+  "computed_overview": {
+    "interactions": 12000,
+    "aht": 9.08,
+    "csat": 3.69,
+    "fcr_pct": 77.07,
+    "sla_pct": 90.03,
+    "cost_usd": 72058.99,
+    "audits": 2200,
+    "qa_average": 84.26,
+    "critical_errors": 36.0,
+    "opportunities": 13,
+    "source_entries": 19,
+    "audit_coverage_pct": 18.33,
+    "coverage_note": "Audits dated in period / contacts dated in period. Audit records can refer to earlier contacts."
+  },
+  "training_association": {
+    "employees": 130,
+    "before_qa": 83.85,
+    "after_qa": 84.48,
+    "before_audits": 299.0,
+    "after_audits": 414.0,
+    "method": "First completed enrollment per employee assigned in period; paired employees with audits on both sides; 30 days before/after completion, clipped to reporting window, excluding completion day. Employee-weighted means. Other training and selection effects are uncontrolled. Association, not causation."
+  }
+}

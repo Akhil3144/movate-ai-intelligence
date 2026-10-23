@@ -1,0 +1,16 @@
+{
+  "name": "movate-ai-operations-intelligence",
+  "private": true,
+  "scripts": {
+    "dev": "python3 scripts/start.py",
+    "setup": "bash scripts/setup.sh",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend test",
+    "test:e2e": "npm --prefix frontend run test:e2e",
+    "prepare:vercel": "node scripts/prepare-vercel.mjs",
+    "build:vercel": "node scripts/verify-deploy-bundle.mjs && npm run build"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

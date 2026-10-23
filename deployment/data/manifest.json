@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "duckdb_version": "1.5.6",
+  "table_counts": {
+    "programs": 4,
+    "employees": 240,
+    "interactions": 12000,
+    "tickets": 12000,
+    "qa_audits": 2200,
+    "coaching_actions": 1094,
+    "training_enrollments": 1000,
+    "courses": 5,
+    "trainers": 26,
+    "sales_leads": 2415,
+    "hr_cases": 85,
+    "hr_onboarding": 240,
+    "employee_recognitions": 400,
+    "knowledge_articles": 16,
+    "daily_program_kpis": 428,
+    "source_opportunities": 19,
+    "opportunity_catalog": 13,
+    "solution_alternatives": 39,
+    "scenario_estimates": 39,
+    "relational_map": 12,
+    "data_dictionary_index": 20
+  },
+  "files": {
+    "movate.duckdb": {
+      "sha256": "ca08611f779fe75af6db7713cc8b3064a48352e5ca3d7f2928122642d6c03a57",
+      "bytes": 6565888
+    },
+    "status.json": {
+      "sha256": "e7963c30cde78f877c4a706924477e911d3fec7176eac883fe4ff40c9569a0ad",
+      "bytes": 86869
+    }
+  }
+}

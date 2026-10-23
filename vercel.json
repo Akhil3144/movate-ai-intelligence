@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm --prefix frontend ci",
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "includeFiles": "deployment/data/**",
+      "excludeFiles": "{frontend/**,node_modules/**,.venv/**,.git/**,.env*,.aws/**,.codex/**,.agents/**,data/**,movate_synthetic_data/**,docs/**,scripts/**,backend/tests/**,**/__pycache__/**,**/*.pyc,**/*.xlsx,**/*.zip,**/*.sqlite*,.pytest_cache/**}"
+    }
+  },
+  "rewrites": [
+    { "source": "/api", "destination": "/api/index?__movate_path=/api" },
+    { "source": "/api/:path*", "destination": "/api/index?__movate_path=/api/:path*" },
+    { "source": "/:path((?!api(?:/|$)).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/api/:path*", "headers": [{ "key": "Cache-Control", "value": "private, no-store" }] },
+    { "source": "/:path*", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }, { "key": "Referrer-Policy", "value": "same-origin" }] }
+  ]
+}

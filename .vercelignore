@@ -1,0 +1,26 @@
+# Allowlist source upload. Never send a developer's environment, private databases or attachments.
+**
+!api/
+!api/index.py
+!backend/
+!backend/*.py
+!frontend/
+!frontend/src/
+!frontend/src/**
+!frontend/index.html
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/tsconfig.json
+!frontend/vite.config.ts
+!frontend/components.json
+!deployment/
+!deployment/data/
+!deployment/data/manifest.json
+!deployment/data/movate.duckdb
+!deployment/data/status.json
+!scripts/
+!scripts/verify-deploy-bundle.mjs
+!package.json
+!requirements.txt
+!.python-version
+!vercel.json
